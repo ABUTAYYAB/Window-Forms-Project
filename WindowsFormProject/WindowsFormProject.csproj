@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA8F3FC3-883F-48AA-AC78-A201B5DBC92C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormProject</RootNamespace>
+    <AssemblyName>WindowsFormProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DairyDelightsLibrary">
+      <HintPath>..\..\DairyDelightsLibrary\DairyDelightsLibrary\bin\Debug\DairyDelightsLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ObjectHandler.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\AddProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AddUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AdminMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AdminMainForm.Designer.cs">
+      <DependentUpon>AdminMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AdminOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\AdminOrder.Designer.cs">
+      <DependentUpon>AdminOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ChangePassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CheckReviewofProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CheckReviewofProducts.Designer.cs">
+      <DependentUpon>CheckReviewofProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomerUI\AddProductInCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CustomerUI\AddProductInCart.Designer.cs">
+      <DependentUpon>AddProductInCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomerUI\BuyCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CustomerUI\BuyCart.Designer.cs">
+      <DependentUpon>BuyCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomerUI\CustomerMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CustomerUI\CustomerMainForm.Designer.cs">
+      <DependentUpon>CustomerMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomerUI\EditUserCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CustomerUI\EditUserCart.Designer.cs">
+      <DependentUpon>EditUserCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomerUI\GiveReview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CustomerUI\GiveReview.Designer.cs">
+      <DependentUpon>GiveReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomerUI\UpdateCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CustomerUI\UpdateCustomer.Designer.cs">
+      <DependentUpon>UpdateCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomerUI\ViewCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CustomerUI\ViewCart.Designer.cs">
+      <DependentUpon>ViewCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomerUI\ViewDetailsOfProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CustomerUI\ViewDetailsOfProducts.Designer.cs">
+      <DependentUpon>ViewDetailsOfProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomerUI\ViewProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CustomerUI\ViewProducts.Designer.cs">
+      <DependentUpon>ViewProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomerUI\ViewReviewsOfProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CustomerUI\ViewReviewsOfProducts.Designer.cs">
+      <DependentUpon>ViewReviewsOfProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomerUI\ViewUndeliveredOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CustomerUI\ViewUndeliveredOrders.Designer.cs">
+      <DependentUpon>ViewUndeliveredOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DeliveryBoyUI\DeliveryBoyMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DeliveryBoyUI\DeliveryBoyMainForm.Designer.cs">
+      <DependentUpon>DeliveryBoyMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DeliveryBoyUI\UpdateDeliveredOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeliveryBoyUI\UpdateDeliveredOrders.Designer.cs">
+      <DependentUpon>UpdateDeliveredOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DeliveryBoyUI\ViewDeliveryBoyDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeliveryBoyUI\ViewDeliveryBoyDetails.Designer.cs">
+      <DependentUpon>ViewDeliveryBoyDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RemoveProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\RemoveProduct.Designer.cs">
+      <DependentUpon>RemoveProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RemoveUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\RemoveUser.Designer.cs">
+      <DependentUpon>RemoveUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SeeComplains.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\SeeComplains.Designer.cs">
+      <DependentUpon>SeeComplains.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SignIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SignIN.Designer.cs">
+      <DependentUpon>SignIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SignUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SignUP.Designer.cs">
+      <DependentUpon>SignUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UpdateDeliveryBoy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UpdateDeliveryBoy.Designer.cs">
+      <DependentUpon>UpdateDeliveryBoy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UpdateProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UpdateProduct.Designer.cs">
+      <DependentUpon>UpdateProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UpdateUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UpdateUser.Designer.cs">
+      <DependentUpon>UpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkerUI\AddComplain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\WorkerUI\AddComplain.Designer.cs">
+      <DependentUpon>AddComplain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkerUI\ClearComplains.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\WorkerUI\ClearComplains.Designer.cs">
+      <DependentUpon>ClearComplains.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkerUI\SeeOrderDetailsWorker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\WorkerUI\SeeOrderDetailsWorker.Designer.cs">
+      <DependentUpon>SeeOrderDetailsWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkerUI\UpdateCustomerByWorker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\WorkerUI\UpdateCustomerByWorker.Designer.cs">
+      <DependentUpon>UpdateCustomerByWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkerUI\ViewOrderWorker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\WorkerUI\ViewOrderWorker.Designer.cs">
+      <DependentUpon>ViewOrderWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkerUI\WorkerDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\WorkerUI\WorkerDetails.Designer.cs">
+      <DependentUpon>WorkerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkerUI\WorkerMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WorkerUI\WorkerMainForm.Designer.cs">
+      <DependentUpon>WorkerMainForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AdminMainForm.resx">
+      <DependentUpon>AdminMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AdminOrder.resx">
+      <DependentUpon>AdminOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CheckReviewofProducts.resx">
+      <DependentUpon>CheckReviewofProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomerUI\AddProductInCart.resx">
+      <DependentUpon>AddProductInCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomerUI\BuyCart.resx">
+      <DependentUpon>BuyCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomerUI\CustomerMainForm.resx">
+      <DependentUpon>CustomerMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomerUI\EditUserCart.resx">
+      <DependentUpon>EditUserCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomerUI\GiveReview.resx">
+      <DependentUpon>GiveReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomerUI\UpdateCustomer.resx">
+      <DependentUpon>UpdateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomerUI\ViewCart.resx">
+      <DependentUpon>ViewCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomerUI\ViewDetailsOfProducts.resx">
+      <DependentUpon>ViewDetailsOfProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomerUI\ViewProducts.resx">
+      <DependentUpon>ViewProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomerUI\ViewReviewsOfProducts.resx">
+      <DependentUpon>ViewReviewsOfProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomerUI\ViewUndeliveredOrders.resx">
+      <DependentUpon>ViewUndeliveredOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeliveryBoyUI\DeliveryBoyMainForm.resx">
+      <DependentUpon>DeliveryBoyMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeliveryBoyUI\UpdateDeliveredOrders.resx">
+      <DependentUpon>UpdateDeliveredOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeliveryBoyUI\ViewDeliveryBoyDetails.resx">
+      <DependentUpon>ViewDeliveryBoyDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RemoveProduct.resx">
+      <DependentUpon>RemoveProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RemoveUser.resx">
+      <DependentUpon>RemoveUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SeeComplains.resx">
+      <DependentUpon>SeeComplains.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SignIN.resx">
+      <DependentUpon>SignIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SignUP.resx">
+      <DependentUpon>SignUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UpdateDeliveryBoy.resx">
+      <DependentUpon>UpdateDeliveryBoy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UpdateProduct.resx">
+      <DependentUpon>UpdateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UpdateUser.resx">
+      <DependentUpon>UpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkerUI\AddComplain.resx">
+      <DependentUpon>AddComplain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkerUI\ClearComplains.resx">
+      <DependentUpon>ClearComplains.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkerUI\SeeOrderDetailsWorker.resx">
+      <DependentUpon>SeeOrderDetailsWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkerUI\UpdateCustomerByWorker.resx">
+      <DependentUpon>UpdateCustomerByWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkerUI\ViewOrderWorker.resx">
+      <DependentUpon>ViewOrderWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkerUI\WorkerDetails.resx">
+      <DependentUpon>WorkerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkerUI\WorkerMainForm.resx">
+      <DependentUpon>WorkerMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main-hero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_Pngtree_man_with_computer_sitting_on_5356036-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-removebg-preview %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-black-eye-logo-brand-font-eye-icon-eye-icon-white-text-people-thumbnail-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-black-eye-logo-brand-font-eye-icon-eye-icon-white-text-people-thumbnail-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-removebg-preview %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-black-eye-logo-brand-font-eye-icon-eye-icon-white-text-people-thumbnail-removebg-preview2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DairyDelights-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DairyDelights__1_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DairyDelights.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DairyDelights1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DairyDelights2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
